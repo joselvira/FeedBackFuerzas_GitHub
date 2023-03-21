@@ -1,0 +1,15 @@
+12/06/2012
+v1.1
+- Se inicia automáticamente con la carpeta donde esté el programa.
+
+__________________________________
+
+28/05/2012
+v1.1
+- Incluida casilla para seleccionar la frecuencia de registro.
+
+__________________________________
+22/05/2012
+
+v1.0
+- Funcionamiento básico.
