@@ -1,3 +1,10 @@
+22/03/2023
+v1.2
+- Permite seleccionar archivo de configuración .xml y nombre de la plataforma.
+- Opción de ajustar offset fuerzas.
+
+__________________________________
+
 12/06/2012
 v1.1
 - Se inicia automáticamente con la carpeta donde esté el programa.

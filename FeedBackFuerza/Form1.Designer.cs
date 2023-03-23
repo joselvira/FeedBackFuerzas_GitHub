@@ -69,15 +69,22 @@
             this.label15 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonReiniciarDAQ = new System.Windows.Forms.Button();
+            this.textBoxNomArchivoConfig = new System.Windows.Forms.TextBox();
+            this.textBoxNomPlate = new System.Windows.Forms.TextBox();
+            this.buttonAjustarOffset = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.richTextBoxCalculandoOffset = new System.Windows.Forms.RichTextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.checkBoxGuardarCsv = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonArranca
             // 
-            this.buttonArranca.Location = new System.Drawing.Point(130, 72);
+            this.buttonArranca.Location = new System.Drawing.Point(178, 12);
             this.buttonArranca.Name = "buttonArranca";
-            this.buttonArranca.Size = new System.Drawing.Size(75, 23);
+            this.buttonArranca.Size = new System.Drawing.Size(75, 34);
             this.buttonArranca.TabIndex = 0;
             this.buttonArranca.Text = "Arranca";
             this.buttonArranca.UseVisualStyleBackColor = true;
@@ -85,7 +92,7 @@
             // 
             // buttonLecturaCero
             // 
-            this.buttonLecturaCero.Location = new System.Drawing.Point(34, 72);
+            this.buttonLecturaCero.Location = new System.Drawing.Point(15, 83);
             this.buttonLecturaCero.Name = "buttonLecturaCero";
             this.buttonLecturaCero.Size = new System.Drawing.Size(75, 23);
             this.buttonLecturaCero.TabIndex = 1;
@@ -100,35 +107,35 @@
             // 
             // textBoxFx
             // 
-            this.textBoxFx.Location = new System.Drawing.Point(296, 60);
+            this.textBoxFx.Location = new System.Drawing.Point(307, 60);
             this.textBoxFx.Name = "textBoxFx";
             this.textBoxFx.Size = new System.Drawing.Size(65, 20);
             this.textBoxFx.TabIndex = 5;
             // 
             // textBoxFy
             // 
-            this.textBoxFy.Location = new System.Drawing.Point(296, 86);
+            this.textBoxFy.Location = new System.Drawing.Point(307, 86);
             this.textBoxFy.Name = "textBoxFy";
             this.textBoxFy.Size = new System.Drawing.Size(65, 20);
             this.textBoxFy.TabIndex = 5;
             // 
             // textBoxFz
             // 
-            this.textBoxFz.Location = new System.Drawing.Point(296, 112);
+            this.textBoxFz.Location = new System.Drawing.Point(307, 112);
             this.textBoxFz.Name = "textBoxFz";
             this.textBoxFz.Size = new System.Drawing.Size(65, 20);
             this.textBoxFz.TabIndex = 5;
             // 
             // textBoxTime
             // 
-            this.textBoxTime.Location = new System.Drawing.Point(296, 34);
+            this.textBoxTime.Location = new System.Drawing.Point(307, 34);
             this.textBoxTime.Name = "textBoxTime";
             this.textBoxTime.Size = new System.Drawing.Size(65, 20);
             this.textBoxTime.TabIndex = 5;
             // 
             // textBoxTimer
             // 
-            this.textBoxTimer.Location = new System.Drawing.Point(296, 8);
+            this.textBoxTimer.Location = new System.Drawing.Point(307, 8);
             this.textBoxTimer.Name = "textBoxTimer";
             this.textBoxTimer.Size = new System.Drawing.Size(65, 20);
             this.textBoxTimer.TabIndex = 6;
@@ -136,7 +143,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(252, 37);
+            this.label1.Location = new System.Drawing.Point(263, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 7;
@@ -145,7 +152,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(259, 61);
+            this.label2.Location = new System.Drawing.Point(270, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(18, 13);
             this.label2.TabIndex = 8;
@@ -154,7 +161,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(259, 86);
+            this.label3.Location = new System.Drawing.Point(270, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(18, 13);
             this.label3.TabIndex = 8;
@@ -163,7 +170,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(259, 115);
+            this.label4.Location = new System.Drawing.Point(270, 115);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(18, 13);
             this.label4.TabIndex = 8;
@@ -224,9 +231,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 157);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 170);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(882, 333);
+            this.pictureBox1.Size = new System.Drawing.Size(967, 320);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
@@ -337,7 +344,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::FeedBackFuerza.Properties.Resources.LogoBiomecIngles;
-            this.pictureBox2.Location = new System.Drawing.Point(737, 87);
+            this.pictureBox2.Location = new System.Drawing.Point(783, 87);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(157, 55);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -396,14 +403,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(178, 12);
+            this.textBox1.Location = new System.Drawing.Point(225, 138);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(99, 20);
             this.textBox1.TabIndex = 16;
             // 
             // buttonReiniciarDAQ
             // 
-            this.buttonReiniciarDAQ.Location = new System.Drawing.Point(34, 104);
+            this.buttonReiniciarDAQ.Location = new System.Drawing.Point(15, 112);
             this.buttonReiniciarDAQ.Name = "buttonReiniciarDAQ";
             this.buttonReiniciarDAQ.Size = new System.Drawing.Size(75, 39);
             this.buttonReiniciarDAQ.TabIndex = 17;
@@ -411,12 +418,88 @@
             this.buttonReiniciarDAQ.UseVisualStyleBackColor = true;
             this.buttonReiniciarDAQ.Click += new System.EventHandler(this.buttonReiniciarDAQ_Click);
             // 
+            // textBoxNomArchivoConfig
+            // 
+            this.textBoxNomArchivoConfig.Location = new System.Drawing.Point(96, 105);
+            this.textBoxNomArchivoConfig.Name = "textBoxNomArchivoConfig";
+            this.textBoxNomArchivoConfig.Size = new System.Drawing.Size(129, 20);
+            this.textBoxNomArchivoConfig.TabIndex = 18;
+            this.textBoxNomArchivoConfig.Text = "config-FeedBackFuerza.xml";
+            // 
+            // textBoxNomPlate
+            // 
+            this.textBoxNomPlate.Location = new System.Drawing.Point(96, 131);
+            this.textBoxNomPlate.Name = "textBoxNomPlate";
+            this.textBoxNomPlate.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNomPlate.TabIndex = 19;
+            this.textBoxNomPlate.Text = "Kistler Grande2";
+            // 
+            // buttonAjustarOffset
+            // 
+            this.buttonAjustarOffset.Location = new System.Drawing.Point(109, 67);
+            this.buttonAjustarOffset.Name = "buttonAjustarOffset";
+            this.buttonAjustarOffset.Size = new System.Drawing.Size(69, 34);
+            this.buttonAjustarOffset.TabIndex = 20;
+            this.buttonAjustarOffset.Text = "Ajustar Offset";
+            this.buttonAjustarOffset.UseVisualStyleBackColor = true;
+            this.buttonAjustarOffset.Click += new System.EventHandler(this.buttonAjustarOffset_Click);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(302, 382);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(349, 25);
+            this.progressBar1.TabIndex = 21;
+            this.progressBar1.Visible = false;
+            // 
+            // richTextBoxCalculandoOffset
+            // 
+            this.richTextBoxCalculandoOffset.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBoxCalculandoOffset.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxCalculandoOffset.Cursor = System.Windows.Forms.Cursors.Default;
+            this.richTextBoxCalculandoOffset.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxCalculandoOffset.ForeColor = System.Drawing.Color.Red;
+            this.richTextBoxCalculandoOffset.Location = new System.Drawing.Point(241, 281);
+            this.richTextBoxCalculandoOffset.Name = "richTextBoxCalculandoOffset";
+            this.richTextBoxCalculandoOffset.Size = new System.Drawing.Size(485, 48);
+            this.richTextBoxCalculandoOffset.TabIndex = 28;
+            this.richTextBoxCalculandoOffset.Text = "        Ajustando fuerzas, espera...\n";
+            this.richTextBoxCalculandoOffset.Visible = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(212, 76);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(41, 13);
+            this.label16.TabIndex = 29;
+            this.label16.Text = "label16";
+            // 
+            // checkBoxGuardarCsv
+            // 
+            this.checkBoxGuardarCsv.AutoSize = true;
+            this.checkBoxGuardarCsv.Checked = true;
+            this.checkBoxGuardarCsv.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxGuardarCsv.Location = new System.Drawing.Point(574, 148);
+            this.checkBoxGuardarCsv.Name = "checkBoxGuardarCsv";
+            this.checkBoxGuardarCsv.Size = new System.Drawing.Size(125, 17);
+            this.checkBoxGuardarCsv.TabIndex = 30;
+            this.checkBoxGuardarCsv.Text = "Guardar archivo .csv";
+            this.checkBoxGuardarCsv.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(906, 502);
+            this.ClientSize = new System.Drawing.Size(991, 502);
+            this.Controls.Add(this.checkBoxGuardarCsv);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.richTextBoxCalculandoOffset);
+            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.buttonAjustarOffset);
+            this.Controls.Add(this.textBoxNomPlate);
+            this.Controls.Add(this.textBoxNomArchivoConfig);
             this.Controls.Add(this.buttonReiniciarDAQ);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox2);
@@ -458,7 +541,6 @@
             this.Controls.Add(this.buttonArranca);
             this.Name = "Form1";
             this.Text = "FeedBackFuerza    v1.2                     (José Luis López Elvira, 2023)";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -510,6 +592,13 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button buttonReiniciarDAQ;
+        private System.Windows.Forms.TextBox textBoxNomArchivoConfig;
+        private System.Windows.Forms.TextBox textBoxNomPlate;
+        private System.Windows.Forms.Button buttonAjustarOffset;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.RichTextBox richTextBoxCalculandoOffset;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.CheckBox checkBoxGuardarCsv;
     }
 }
 
